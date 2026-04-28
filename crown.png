@@ -1,0 +1,33 @@
+import { useState } from "react";
+
+export function useMenuSwiper(onClose) {
+  const [startX, setStartX] = useState(0);
+  const [translate, setTranslate] = useState(0);
+
+  const handleTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+
+    if (diff < 0) {
+      setTranslate(diff);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (translate < -100) {
+      onClose(); // 
+    }
+    setTranslate(0);
+  };
+
+  return {
+    translate,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+  };
+}

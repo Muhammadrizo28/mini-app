@@ -1,0 +1,17 @@
+import { BackMainPage } from "../components/BackMainPage";
+import { BottomMenu } from "../components/BottomMenu";
+import { Header } from "../components/Header";
+import style from '../style/pages/focus.module.scss'
+
+
+
+export function FocusPage() {
+
+    return (
+        <div className={style.mainDiv}>
+            <Header/>
+            <BottomMenu/>
+        </div>
+    )
+    
+}

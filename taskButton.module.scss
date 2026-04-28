@@ -1,0 +1,56 @@
+
+.mainDiv {
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #061223;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header {
+
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    
+}
+
+.menuBtnBox {
+
+    width: fit-content;
+    justify-content: start;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.streakBtnBox  {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 80%;
+
+}
+
+.menuButton {
+
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    margin-left: 5%;
+    border: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+

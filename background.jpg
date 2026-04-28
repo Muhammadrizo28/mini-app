@@ -1,0 +1,17 @@
+import { createContext, useState } from "react";
+
+
+export const TaskBarContext = createContext();
+export function TaskBarProvider({ children }) {
+  const [taskBarOpen, setTaskBarOpen] = useState(false);
+
+  return (
+    <TaskBar.Provider value={{ taskBarOpen, setTaskBarOpen }}>
+      {children}
+    </TaskBar.Provider>
+  );
+}
+
+
+
+

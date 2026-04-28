@@ -1,0 +1,30 @@
+import { BackMainPage } from "../components/BackMainPage";
+
+export function SettingsPage() {
+
+    return (
+        <div className={style.mainDiv}>
+            <BackMainPage/>
+            
+        </div>
+    )
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

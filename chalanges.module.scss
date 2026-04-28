@@ -1,0 +1,31 @@
+
+
+import { useState } from 'react'
+import { BottomMenu } from '../components/BottomMenu.jsx'
+import { Header } from '../components/Header.jsx'
+import { TaskBar } from '../components/TaskBar.jsx'
+import { TaskButton } from '../components/TaskButton.jsx'
+import style from '../style/pages/tasks.module.scss'
+import { AddTasksBar } from '../components/AddTasksBar.jsx'
+
+export function TaskPage() {
+  const [addTaskBar, setAddTaskBar] = useState(false);
+
+  return (
+    <div className={style.mainDiv}>
+      <Header />
+
+      <TaskBar />
+
+      {addTaskBar && (<AddTasksBar addTaskBar={addTaskBar} setAddTaskBar={setAddTaskBar}/>)}
+
+      <TaskButton onClick={() => setAddTaskBar(true)} />
+
+      <BottomMenu />
+    </div>
+  );
+}
+
+
+
+

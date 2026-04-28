@@ -1,0 +1,13 @@
+import { createContext, useState } from "react";
+
+
+export const StreakContext = createContext();
+export function StreakProvider({ children }) {
+  const [streak, setStreak] = useState(300);
+
+  return (
+    <StreakContext.Provider value={{ streak, setStreak }}>
+      {children}
+    </StreakContext.Provider>
+  );
+}
